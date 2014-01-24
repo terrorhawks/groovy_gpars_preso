@@ -1,0 +1,57 @@
+Page 1.
+
+Why concurrency?
+
+Page 2.
+
+Supports either Java or Groovy
+Lack of CPU utilisation
+
+JSR-166 (JDK5 spec)
+JSR-166y (Revision for JDK7 - Fork/Join framework)
+
+Page 2.
+
+1. Concurrent collection processing
+
+
+2. Composable asynchronous functions
+
+def resize = { img -> img.resize(64,64)}
+//make the block async
+def fastResize = resize.async()
+//each image in the collection is processed async in parallel
+def resized = images.collect fastResize
+
+3. Fork/Join 
+
+	- Solve hierarchical problems - Divide and conquer, merge sort, quick sort, tree, traversal, file search/scan
+	
+	
+
+4. Actor programming model
+
+VM can only give you a limited number of threads (typically around a couple of thousands), the number of actors is only limited by the available memory
+
+
+5. Dataflow concurrency constructs
+
+
+6. CSP (Communicating Sequential Processes)
+
+
+7. Agent - an thread-safe reference to mutable state
+
+
+8. STM (Software Transactional Memory)
+
+Page 3.
+
+Message based currency (don't explicitly call classes)
+
+Deadlock - A deadlock is a situation where in two or more competing actions are each waiting for the other to finish, and thus neither ever does.
+Livelock - A livelock is similar to a deadlock, except that the states of the processes involved in the livelock constantly change with regard to one another, none progressing.
+
+
+
+Page 4.
